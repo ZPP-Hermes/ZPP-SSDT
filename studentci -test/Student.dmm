@@ -1,0 +1,160 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6139c703-8f5b-471e-bf48-891d5b16527d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Student</ID>
+  <Name>Student</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>MDXFilterComponent</Name>
+      <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"&gt;&lt;FilterItem&gt;&lt;HierarchyUniqueName&gt;[Program].[Program ID]&lt;/HierarchyUniqueName&gt;&lt;Condition xsi:type="EqualTo"&gt;&lt;Members&gt;&lt;Member&gt;&lt;MemberUniqueName&gt;[Program].[Program ID].&amp;amp;[1]&lt;/MemberUniqueName&gt;&lt;/Member&gt;&lt;/Members&gt;&lt;/Condition&gt;&lt;/FilterItem&gt;&lt;/FilterItems&gt;&lt;/Filter&gt;</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="7be8463a-0095-4678-a738-561ee2a3c812">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>Test</CubeID>
+    <CubeDimensionID>Student</CubeDimensionID>
+    <Filter>( SELECT ( { [Program].[Program ID].&amp;[1] } ) ON COLUMNS FROM [Test])</Filter>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2a04fd61-4ee5-4a30-bf63-9bfbcb68f457">
+      <ID>Student ID</ID>
+      <Name>Student ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="646060d7-7afa-4339-bd17-ff6ea4dee34a">
+        <CubeID>Test</CubeID>
+        <CubeDimensionID>Student</CubeDimensionID>
+        <AttributeID>Student ID</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3c6d85bc-b3a4-41d3-b797-86675f320a3b">
+      <ID>Ocena</ID>
+      <Name>Ocena</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="7ad981f7-ef31-4e6b-a8f3-a48a1fa1dda1">
+        <MeasureID>Ocena</MeasureID>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="TableMiningStructureColumn" dwd:design-time-name="c609d7d6-00d4-47f6-a8ab-58edc0bd5d6d">
+      <Annotations>
+        <Annotation>
+          <Name>MDXFilterComponent</Name>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"&gt;&lt;FilterItem&gt;&lt;HierarchyUniqueName&gt;[Program].[Program ID]&lt;/HierarchyUniqueName&gt;&lt;Condition xsi:type="EqualTo"&gt;&lt;Members&gt;&lt;Member&gt;&lt;MemberUniqueName&gt;[Program].[Program ID].&amp;amp;[1]&lt;/MemberUniqueName&gt;&lt;/Member&gt;&lt;/Members&gt;&lt;/Condition&gt;&lt;/FilterItem&gt;&lt;/FilterItems&gt;&lt;/Filter&gt;</Value>
+        </Annotation>
+      </Annotations>
+      <ID>Przedmiot</ID>
+      <Name>Przedmiot</Name>
+      <SourceMeasureGroup dwd:design-time-name="1d5bc25f-9b59-4ffb-9a22-bc3a9b7c0ad4">
+        <DataSourceID>.</DataSourceID>
+        <CubeID>Test</CubeID>
+        <MeasureGroupID>Fact Student</MeasureGroupID>
+        <RefreshInterval>PT1S</RefreshInterval>
+        <Filter>( SELECT ( { [Program].[Program ID].&amp;[1] } ) ON COLUMNS FROM [Test])</Filter>
+      </SourceMeasureGroup>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="70ea6967-83d0-4c41-a564-5e9de94a74a7">
+          <ID>Przedmiot ID</ID>
+          <Name>Przedmiot ID</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="4c2bdc63-694b-451d-9008-fc020e4fca5b">
+            <CubeID>Test</CubeID>
+            <CubeDimensionID>Przedmiot</CubeDimensionID>
+            <AttributeID>Przedmiot ID</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Key</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a1b22a71-e8db-4cae-9d4b-63f9828c3e83">
+          <ID>Ocena</ID>
+          <Name>Ocena</Name>
+          <Type>Long</Type>
+          <Source xsi:type="MeasureBinding" dwd:design-time-name="ec5898ae-3eb1-43ff-b427-0413b5d50901">
+            <MeasureID>Ocena</MeasureID>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+      </Columns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="cc3c7fa2-d3df-43c3-927b-05e7577d3a6f">
+      <ID>Student</ID>
+      <Name>Student</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="d23432de-fdf6-4286-9ed3-a4989b01591c">
+          <ID>Student ID</ID>
+          <Name>Student ID</Name>
+          <SourceColumnID>Student ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="94cd384f-a3ba-4e1c-8194-e49d9c14c21a">
+          <ID>Przedmiot</ID>
+          <Name>Przedmiot</Name>
+          <SourceColumnID>Przedmiot</SourceColumnID>
+          <Columns>
+            <Column dwd:design-time-name="50d55a24-286f-41ed-97db-2d8eae035fe9">
+              <ID>Przedmiot ID</ID>
+              <Name>Przedmiot ID</Name>
+              <SourceColumnID>Przedmiot ID</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column dwd:design-time-name="7d1899b1-ce99-4584-8d4f-624bcce45bd0">
+              <ID>Ocena</ID>
+              <Name>Ocena</Name>
+              <SourceColumnID>Ocena</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+          </Columns>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

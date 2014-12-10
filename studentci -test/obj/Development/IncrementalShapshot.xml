@@ -33,35 +33,35 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>HUM+lcg0tRKDE9PBDavBWICrUSA=2014-12-09 19:00:322014-12-09 19:00:32</TimeStamp>
+        <TimeStamp>u8WsGimVbXh2Z7qtp/AB+QEatmc=2014-12-10 16:38:472014-12-10 16:25:32</TimeStamp>
         <ID>
           <String>Program</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>/9grFLLbHfIZTj5Xl76yJ4PuAXo=2014-12-09 19:00:322014-12-09 19:00:32</TimeStamp>
+        <TimeStamp>zsz5QfmEG5lho2wWl8vNciOcjhc=2014-12-10 16:38:472014-12-10 16:25:32</TimeStamp>
         <ID>
           <String>Przedmiot</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>AoSO/1biipN4CdI1OmzcboeKOLo=2014-12-09 19:00:322014-12-09 19:00:32</TimeStamp>
+        <TimeStamp>Gnwj6NfSjYxZj6+xKnmPRZkpqUY=2014-12-10 16:38:472014-12-10 16:25:32</TimeStamp>
         <ID>
           <String>Student</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>h2lKhiyCVtmOiIhL/T23utEkfU0=2014-12-09 19:00:322014-12-09 19:00:32naKfkls5qaHRBcmkeOgpwzU7cCE=2014-12-09 19:00:322014-12-09 19:00:32</TimeStamp>
+        <TimeStamp>iXiBcczH/6ZPQekVz2cgqsVn2vo=2014-12-10 17:10:292014-12-10 16:25:32pGVEYd4k43bYrKnb7z4PRyujfjs=2014-12-10 17:10:292014-12-10 16:25:32</TimeStamp>
         <ID>
           <String>Test</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>vz1zEXgMzFAvgjJlMyNlGQKpV6o=2014-12-09 19:09:352014-12-09 19:09:35</TimeStamp>
+        <TimeStamp>Y3/sQauARwNCocYxxg73XJ5PbIg=2014-12-10 17:23:342014-12-10 17:15:32</TimeStamp>
         <ID>
           <String>Student</String>
         </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2014-12-09T18:09:52.14Z</LastDeployed>
+  <LastDeployed>2014-12-10T16:24:39.84Z</LastDeployed>
 </DeploymentSnapshot>
