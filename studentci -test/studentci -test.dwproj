@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Test.cube</Name>
-      <FullPath>Test.cube</FullPath>
+      <Name>Test2.cube</Name>
+      <FullPath>Test2.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Test.partitions</Name>
-          <FullPath>Test.partitions</FullPath>
+          <Name>Test2.partitions</Name>
+          <FullPath>Test2.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -24,12 +24,12 @@
       <FullPath>Program.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Przedmiot.dim</Name>
-      <FullPath>Przedmiot.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Student.dim</Name>
       <FullPath>Student.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Przedmiot.dim</Name>
+      <FullPath>Przedmiot.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -40,8 +40,8 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>Test.dsv</Name>
-      <FullPath>Test.dsv</FullPath>
+      <Name>Test2.dsv</Name>
+      <FullPath>Test2.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <MiningModels>
@@ -58,7 +58,7 @@
           <ConfigurationSetting>
             <Id>Test</Id>
             <Name>Test</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=zpptestvm;Integrated Security=SSPI;Initial Catalog=Test</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=zpptestvm;Integrated Security=SSPI;Initial Catalog=Test2</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

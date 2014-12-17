@@ -1,0 +1,135 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c40ffc71-ca8a-4540-ac4e-393b922c4bb8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Test2</ID>
+  <Name>Test2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Test</DataSourceID>
+  <Schema>
+    <xs:schema id="Test2" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Test2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d0eed7c4-8785-41de-ba48-8683006344cd">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact_Student" msprop:design-time-name="67bf27d2-5efd-449d-804e-5e5b7ca5e725" msprop:DbTableName="Fact_Student" msprop:FriendlyName="Fact_Student" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StudentID" msprop:design-time-name="50ec9542-f0a7-4a4e-a1ec-279c42df4eef" msprop:DbColumnName="StudentID" msprop:FriendlyName="StudentID" type="xs:int" />
+                  <xs:element name="id_program" msprop:design-time-name="3144ca81-06c5-4f03-9449-8bff9e00841b" msprop:DbColumnName="id_program" msprop:FriendlyName="id_program" type="xs:int" />
+                  <xs:element name="id_przedmiot" msprop:design-time-name="a1e139d0-3f6a-47e2-947b-a4a9542cc43d" msprop:DbColumnName="id_przedmiot" msprop:FriendlyName="id_przedmiot" type="xs:int" />
+                  <xs:element name="Ocena" msprop:design-time-name="a2a98eb0-7551-45b1-a067-0b0b88c3d5a4" msprop:DbColumnName="Ocena" msprop:FriendlyName="Ocena" type="xs:int" minOccurs="0" />
+                  <xs:element name="RowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="7ba2d119-ed49-411a-8eb8-052a8f7a25c2" msprop:DbColumnName="RowId" msprop:FriendlyName="RowId" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Program" msprop:design-time-name="f9a820dc-bcff-4ccb-9231-05ef904289c7" msprop:DbTableName="Program" msprop:FriendlyName="Program" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProgramID" msprop:design-time-name="6e95106f-f3ec-4dc1-bed1-d7ea60a87375" msprop:DbColumnName="ProgramID" msprop:FriendlyName="ProgramID" type="xs:int" />
+                  <xs:element name="Nazwa" msprop:design-time-name="e126df9d-18c0-4921-8d29-174f43a4431c" msprop:DbColumnName="Nazwa" msprop:FriendlyName="Nazwa">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Przedmiot" msprop:design-time-name="ca9f1d14-9e01-4aee-97fe-79dac6980fa6" msprop:DbTableName="Przedmiot" msprop:FriendlyName="Przedmiot" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PrzedmiotID" msprop:design-time-name="3f9c1bb1-2727-48ca-b377-3870ffaa75e5" msprop:DbColumnName="PrzedmiotID" msprop:FriendlyName="PrzedmiotID" type="xs:int" />
+                  <xs:element name="Nazwa" msprop:design-time-name="f7aa86ae-eabf-4df8-9cfb-fbcbbbffa14a" msprop:DbColumnName="Nazwa" msprop:FriendlyName="Nazwa">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Student" msprop:design-time-name="9f736190-73e3-4e77-8924-fc18b3daba4f" msprop:DbTableName="Student" msprop:FriendlyName="Student" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="StudentID" msprop:design-time-name="be3de2e5-72dc-4e8c-bd52-81dfb06f36f9" msprop:DbColumnName="StudentID" msprop:FriendlyName="StudentID" type="xs:int" />
+                  <xs:element name="Imie" msprop:design-time-name="b6e65313-d393-4dd4-a438-1b74da09c27b" msprop:DbColumnName="Imie" msprop:FriendlyName="Imie">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Student" />
+          <xs:field xpath="RowId" />
+        </xs:unique>
+        <xs:unique name="dbo_Program_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Program" />
+          <xs:field xpath="ProgramID" />
+        </xs:unique>
+        <xs:unique name="dbo_Przedmiot_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Przedmiot" />
+          <xs:field xpath="PrzedmiotID" />
+        </xs:unique>
+        <xs:unique name="dbo_Student_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Student" />
+          <xs:field xpath="StudentID" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Stud__id_pr__173876EA" refer="dbo_Przedmiot_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Student" />
+          <xs:field xpath="id_przedmiot" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stud__Stude__15502E78" refer="dbo_Student_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Student" />
+          <xs:field xpath="StudentID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stud__id_pr__164452B1" refer="dbo_Program_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Student" />
+          <xs:field xpath="id_program" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Test2 xmlns="" />
+  </Schema>
+</DataSourceView>
