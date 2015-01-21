@@ -58,7 +58,7 @@
           <ConfigurationSetting>
             <Id>Test</Id>
             <Name>Test</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=zpptestvm;Integrated Security=SSPI;Initial Catalog=Test2</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=zpptestvm;Integrated Security=SSPI;Initial Catalog=Student</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

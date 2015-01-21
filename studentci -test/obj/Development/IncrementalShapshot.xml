@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>Default</ProcessingOption>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,49 +19,49 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>Ox5nZADVvGQhY/WhK+0JfxTWE9w=2014-12-16 14:25:062014-12-09 18:57:42</TimeStamp>
+        <TimeStamp>CoJkSujU3KYD6dsi97MLhpVrrOI=2015-01-21 22:04:492015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Test</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>2jKhPL8mpRV3NUHHtA28OUZa/ew=2014-12-16 14:26:172014-12-16 14:26:16</TimeStamp>
+        <TimeStamp>k0+QSQRJM2uE9g2I4qHnEl09gKg=2015-01-21 22:05:302015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Test2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>RfskM1faIxVDk8Hr5JmJDMv8DOY=2014-12-16 14:27:272014-12-16 14:27:27</TimeStamp>
+        <TimeStamp>RfskM1faIxVDk8Hr5JmJDMv8DOY=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Program</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>uUQIVEn3PMMbU+mV6wVRCMS6d40=2014-12-16 14:27:272014-12-16 14:27:27</TimeStamp>
+        <TimeStamp>uUQIVEn3PMMbU+mV6wVRCMS6d40=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Student</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>qVOaQu6BGSWhWC9fCBrPzwwfhEA=2014-12-16 14:27:272014-12-16 14:27:27</TimeStamp>
+        <TimeStamp>qVOaQu6BGSWhWC9fCBrPzwwfhEA=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Przedmiot</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>s5dR9dmcJtLt57Fji1bHn6EdJ9Q=2014-12-16 14:29:062014-12-16 14:27:27l7XVmJHpj0EV4BJLwKBY2SE5sWo=2014-12-16 14:27:272014-12-16 14:27:27</TimeStamp>
+        <TimeStamp>s5dR9dmcJtLt57Fji1bHn6EdJ9Q=2015-01-21 22:04:142015-01-21 22:04:14l7XVmJHpj0EV4BJLwKBY2SE5sWo=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Test2</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.MiningStructure</Type>
-        <TimeStamp>S0hmAudr47C21RO50c5WxPLkR+E=2014-12-16 14:35:372014-12-16 14:30:23</TimeStamp>
+        <TimeStamp>S0hmAudr47C21RO50c5WxPLkR+E=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
         <ID>
           <String>Student</String>
         </ID>
@@ -69,7 +69,7 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>XGQpnW8/OCnSSRJ4VUPPfbcpAis=2014-12-09 18:57:152014-12-09 18:57:15</TimeStamp>
+      <TimeStamp>XGQpnW8/OCnSSRJ4VUPPfbcpAis=2015-01-21 22:04:142015-01-21 22:04:14</TimeStamp>
       <ID>
         <String>studentci -test</String>
       </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2014-12-17T16:09:25.11Z</LastDeployed>
+  <LastDeployed>2015-01-21T21:06:52.826667Z</LastDeployed>
 </DeploymentSnapshot>
