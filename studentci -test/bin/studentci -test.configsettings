@@ -26,6 +26,12 @@
       <MiningStructure>
         <ID>Student</ID>
       </MiningStructure>
+      <MiningStructure>
+        <ID>Asocjacja_P</ID>
+      </MiningStructure>
+      <MiningStructure>
+        <ID>Asocjacja_PiO</ID>
+      </MiningStructure>
     </MiningStructures>
     <Cubes>
       <Cube>
