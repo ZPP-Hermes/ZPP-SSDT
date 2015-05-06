@@ -1,3 +1,17 @@
+#skrypt implementujący funkcje wyboru przedmiotów obieralnych dla studenta na podstawie reguł asocjacyjnych (koszyki 
+#stanowią wybierane przedmioty obieralne dla studentów) oraz wyboru dla niego odpowiedniej grupy 
+# na podstawie danych studenta pobieranych z pliku .csv. W przyszłości mozna wykorzystać wiadomości o grupie do analiz
+
+# format funkcji: getRecomSub(v, pr), gdzie
+# v <- (wektor ocen z przedmiotów obieralnych studenta (0 gdy nie brał udziału))
+# pr <- procent przedmiotów, który ma dopasować się do studenta, domyślnie 50%
+# funkcja zwraca wektor przedmiotów proponowanych dla studenta
+
+# getCluster(v,agg), gdzie
+# v <- wektor ocen ze wszystich przedmiotów studenta
+# agg <- macierz zawierająca średnie oceny dla każdej grupy, domyslnie wytrenowana ze wszystkich przedmiotów
+# funkcja zwraca jedną liczbę, numer klastra dla danego studenta
+
 #dane należy umieścić w katalogu roboczym dla R, można go zobaczyć poprzez wywołanie funkcji getwd()
 dir <- paste(getwd(), "/ZPP_dane.csv", sep="")
 data <- read.csv(dir, sep=",")
@@ -43,6 +57,26 @@ pr <- 1/8
 
 getRecomSub <- function(student, pr) {
   Idx = sample(1:length(student), round(pr*length(student)))
+  student <- student[Idx]
+  n <- length(student)
+  rules <- ruleObier
+  for (i in 1:n)
+  {
+    rules = subset(rules, lhs %in% paste(student[i]))
+  }
+  subMatr <- as(rhs(rules), "matrix")
+  m <- dim(subMatr)[1]
+  recomSub <- vector()
+  for (i in 1:m)
+  {
+    recomSub <- c(recomSub, which(subMatr[i,]>0))
+  }
+  recomSub <- unique(recomSub)
+  return(recomSub)
+}
+
+getRecomSub <- function(student) {
+  Idx = sample(1:length(student), round((1/2)*length(student)))
   student <- student[Idx]
   n <- length(student)
   rules <- ruleObier
