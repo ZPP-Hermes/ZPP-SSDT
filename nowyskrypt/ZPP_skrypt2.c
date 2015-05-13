@@ -85,28 +85,28 @@ void main(int argc, char *argv[]){
 	srand(time(NULL));
 	printf("[");
 	for(i=0;i<30;++i){
-		printf("{\"model\":\"ZPP1_forscript.course\",\"pk\" : %d, \"fields\": {\"name\":\"obow%d\", \"type\": \"OBOW\"}},\n",i+1,i+1);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"obow%d\", \"type\": \"OBOW\"}},\n",i+1,i+1);
 	}
 	for(i=0;i<20;++i){
-		printf("{\"model\":\"ZPP1_forscript.course\",\"pk\" : %d, \"fields\": {\"name\":\"obier%d\", \"type\": \"OBIER\"}},\n",i+31,i+31);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"obier%d\", \"type\": \"OBIER\"}},\n",i+31,i+31);
 	}
 	for(i=0;i<10;++i){
-		printf("{\"model\":\"ZPP1_forscript.course\",\"pk\" : %d, \"fields\": {\"name\":\"sem%d\", \"type\": \"SEM\"}},\n",i+51,i+51);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"sem%d\", \"type\": \"SEM\"}},\n",i+51,i+51);
 	}
 	for(i=off;i<n+off;++i){
-		printf("{\"model\":\"ZPP1_forscript.student\",\"pk\" : %d, \"fields\": {\"usos_id\":\"%d\"}},\n",i+1,i+1);
+		printf("{\"model\":\"app.student\",\"pk\" : %d, \"fields\": {\"usos_id\":\"%d\"}},\n",i+1,i+1);
 		k=rand()%10;
 		for(j=0;j<30;++j){
-			printf("{\"model\":\"ZPP1_forscript.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,j+1,rank(k,j/3));
+			printf("{\"model\":\"app.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,j+1,rank(k,j/3));
 		}
 		for(j=0;j<20;++j){
 			if(choose(k,j/2)!=0){
-				printf("{\"model\":\"ZPP1_forscript.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,j+31,rank(k,j/2));
+				printf("{\"model\":\"app.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,j+31,rank(k,j/2));
 			}
 		}
-		printf("{\"model\":\"ZPP1_forscript.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,k+51,rank(k,k));
+		printf("{\"model\":\"app.mark\", \"fields\": {\"student\":%d, \"course\":%d, \"mark\": \"%d\"}},\n",i+1,k+51,rank(k,k));
 	}
-	printf("{\"model\":\"ZPP1_forscript.student\",\"pk\" : %d, \"fields\": {\"usos_id\":\"%d\"}}\n",n+1,n+1);
+	printf("{\"model\":\"app.student\",\"pk\" : %d, \"fields\": {\"usos_id\":\"%d\"}}\n",n+1,n+1);
 	printf("]");
 
 }
