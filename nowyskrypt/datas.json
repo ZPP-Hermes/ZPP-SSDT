@@ -1,0 +1,6 @@
+[
+{"model":"ZPP1_forscript.student","pk" : 1, "fields": {"usos_id":"000001"}},
+{"model":"ZPP1_forscript.course","pk" : 1, "fields": {"name":"obow1", "type": "OBOW"}},
+{"model":"ZPP1_forscript.course","pk" : 31, "fields": {"name":"obier1", "type": "OBIER"}},
+{"model":"ZPP1_forscript.mark", "fields": {"student":1, "course":1, "mark": "4"}}
+]
