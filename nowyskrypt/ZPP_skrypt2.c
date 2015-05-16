@@ -13,6 +13,26 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+	char nazwyobow[30][60] = {"Języki i narzędzia programowania 1", "Języki i narzędzia programowania 2", "Języki i narzędzia programowania 3", "Aplikacje WWW",
+		"Indywidualny projekt programistyczny", "Inżynieria oprogramowania", "Systemy operacyjne", "Sieci komputerowe", "Bezpieczeństwo systemów komputerowych", 
+		"Języki i paradygmaty programowania", "Programowanie obiektowe", "Bazy Danych", "Wstęp do programowania", "Architektura komputerów i sieci",
+		"Problemy społeczne i zawodowe informatyki", "Algorytmy i struktury danych", "Języki, automaty i obliczenia", "Semantyka i weryfikacja programów", "Podstawy matematyki",
+		"Matematyka dyskretna", "Metody numetyczne", "Analiza matematyczna dla informatyków 1", "Analiza matematyczna dla informatyków 2", "Raczhunek prawdopodobieństwa i statystyka",
+		 "Geometria z algebrą liniową", "Rachunek prawdopodobieństwa 1", "Statystyka 1", "Algebra 1", "Równania różniczkowe zwyczajne", "Topologia 1"};
+	char nazwyobier[20][60] = {"Zaawansowane systemy operacyjne", "Programowanie mikrokontrolerów", "Kompresja danych", "Przetwarzanie dużych danych",
+		"Programowanie w logice", "Wstęp do biologii obliczeniowej", "Zaawansowane bazy danych", "Systemy uczące się", "Sztuczna inteligencja i systemy doradcze", "Data mining", "Algorytmika",
+		"Algorytmy tekstowe", "Weryfikacja wspomagana komputerowo", "Wnioskowanie w serwisach i systemach informatycznych", "Teoria informacji", "Kryptografia",
+		"Matematyka obliczeniowa 2", "Statystyka 2", "Rachunek prawdopodobieństwa 2", "Optymalizacja 1"};
+	char nazwysem[10][60] = {"Systemy rozproszone", "Języki programowania", "Zagadnienia programowania obiektowego", "Wybrane aspekty inżynierii oprogramowania",
+		"Analiza, wizualizacja i optymalizacja oprogramowania", "Innowacyjne zastosowania informatyki", "Molekularna biologia obliczeniowa", "Bazy danych",
+		"Algorytmika", "Matematyka w informatyce"};
+	char urlobow[30][20] = {"1000-223bJNP1", "1000-224bJNP2", "1000-225bJNP3", "1000-214bWWW", "1000-222bIPP", "1000-214bIOP", "1000-213bSOP", "1000-214bSIK", "1000-215bBSK",
+		  "1000-216bJPP", "1000-212bPO", "1000-213bBAD", "1000-211bWPI", "1000-212bAKS", "1000-214bPSZ", "1000-213bASD", "1000-214bJAO", "1000-215bSWP", "1000-211bPM","1000-215bMNU",
+		 "1000-212bMD", "1000-211bAM1", "1000-212bAM2", "1000-213bRPS", "1000-211bGAL", "1000-114bRP1a", "1000-115ST1a", "1000-113bAG1a", "1000-114bRRZa", "1000-113bTP1a"};
+	char urlobier[20][20] = {"1000-2N09ZSO", "1000-2M08PMK", "1000-2N09KDW", "1000-2M13PDD", "1000-2N00PLO", "1000-2N03BO", "1000-2N09ZBD", "1000-2N09SUS", "1000-2N00SID",
+		"1000-2M03DM", "1000-2N00ALG", "1000-2N09ALT", "1000-2N09WWK", "1000-2N09WSS", "1000-2N03TI", "1000-2M12KI1", "1000-135MO2", "1000-135ST2", "1000-135RP2", "1000-134OP1"};
+	char urlsem[10][20] = {"1000-2D97SR", "1000-2D13JP", "1000-2D03PO", "1000-2D97IO", "1000-2D11WSI", "1000-2D10IZI", "1000-5D97MB", "1000-2D97DB", "1000-2D97AL", "1000-5D96MI"}; 
+
 	int wyrownanie[10]={45,37,31,27,25,25,27,31,37,45};
 	int procenty[7], odchyly[7];
 	int wybieralnosc,wyb_odch;
@@ -54,7 +74,6 @@ int rank(int k, int l){
 
 void main(int argc, char *argv[]){
 	int i,j,k,n,r,off;
-	
 	if(argc!=19){
 		fprintf(stderr, "zła liczba argumentów\n");
 		return;
@@ -85,13 +104,13 @@ void main(int argc, char *argv[]){
 	srand(time(NULL));
 	printf("[");
 	for(i=0;i<30;++i){
-		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"obow%d\", \"type\": \"OBOW\"}},\n",i+1,i+1);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"%s\", \"type\": \"OBOW\",\"url\":\"%s\"}},\n",i+1,nazwyobow[i],urlobow[i]);
 	}
 	for(i=0;i<20;++i){
-		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"obier%d\", \"type\": \"OBIER\"}},\n",i+31,i+31);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"%s\", \"type\": \"OBIER\",\"url\":\"%s\"}},\n",i+31,nazwyobier[i],urlobier[i]);
 	}
 	for(i=0;i<10;++i){
-		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"sem%d\", \"type\": \"SEM\"}},\n",i+51,i+51);
+		printf("{\"model\":\"app.course\",\"pk\" : %d, \"fields\": {\"name\":\"%s\", \"type\": \"SEM\",\"url\":\"%s\"}},\n",i+51,nazwysem[i],urlsem[i]);
 	}
 	for(i=off;i<n+off;++i){
 		printf("{\"model\":\"app.student\",\"pk\" : %d, \"fields\": {\"usos_id\":\"%d\"}},\n",i+1,i+1);

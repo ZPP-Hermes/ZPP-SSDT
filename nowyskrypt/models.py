@@ -14,6 +14,7 @@ class Course(models.Model):
 	)
 	name = models.CharField(max_length = 250)
 	type = models.CharField(max_length = 250, choices = TYPES)
+	url = models.CharField(max_length = 250)
 	
 class Mark(models.Model):
 	MARKS = (
