@@ -12,13 +12,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+	int hardness[51] = {1,-4,-4,0,1,0,3,3,2,3,1,-2,0,-5,-4,0,-2,0,-2,-1,1,-1,-1,0,1,1,1,2,3,2,5,4,2,2,1,1,1,2,-1,1,2,1,-1,1,1,0,3,3,2,-1,0};
+	int exteasy[7]={1,8,21,40,70,95,100};
+	int exthard[7]={60,82,92,97,99,100,100};
 	int wyrownanie[10]={45,37,31,27,25,25,27,31,37,45};
 	int procenty[7], odchyly[7];
 	int wybieralnosc,wyb_odch;
 
 float modul(int k, int l){
 	int m = (k<l?l-k:k-l);
-	return 1.0-(10.0*m)/wyrownanie[k];
+	return 1.0-(10.0*m)/wyrownanie[l];
 }
 
 int choose(int k, int l){
@@ -30,23 +33,49 @@ int choose(int k, int l){
 	}
 }
 
-int rank(int k, int l){
-	float m = modul(k,l);
-	int r=rand()%100;
-	if(r<procenty[0]+m*odchyly[0]){
+int rankeasy(int r,int m,int h){
+	if(10*r<(10-h)*(procenty[0]+m*odchyly[0])+h*(exteasy[0])){
 		return 4;
-	}else if(r<procenty[1]+m*odchyly[1]){
+	}else if(10*r<(10-h)*(procenty[1]+m*odchyly[1])+h*(exteasy[1])){
 		return 6;
-	}else if(r<procenty[2]+m*odchyly[2]){
+	}else if(10*r<(10-h)*(procenty[2]+m*odchyly[2])+h*(exteasy[2])){
 		return 7;
-	}else if(r<procenty[3]+m*odchyly[3]){
+	}else if(10*r<(10-h)*(procenty[3]+m*odchyly[3])+h*(exteasy[3])){
 		return 8;
-	}else if(r<procenty[4]+m*odchyly[4]){
+	}else if(10*r<(10-h)*(procenty[4]+m*odchyly[4])+h*(exteasy[4])){
 		return 9;
-	}else if(r<procenty[5]+m*odchyly[5]){
+	}else if(10*r<(10-h)*(procenty[5]+m*odchyly[5])+h*(exteasy[5])){
 		return 10;
 	}else{
 		return 11;
+	}
+}
+
+int rankhard(int r,int m,int h){
+	if(10*r<(10-h)*(procenty[0]+m*odchyly[0])+h*(exthard[0])){
+		return 4;
+	}else if(10*r<(10-h)*(procenty[1]+m*odchyly[1])+h*(exthard[1])){
+		return 6;
+	}else if(10*r<(10-h)*(procenty[2]+m*odchyly[2])+h*(exthard[2])){
+		return 7;
+	}else if(10*r<(10-h)*(procenty[3]+m*odchyly[3])+h*(exthard[3])){
+		return 8;
+	}else if(10*r<(10-h)*(procenty[4]+m*odchyly[4])+h*(exthard[4])){
+		return 9;
+	}else if(10*r<(10-h)*(procenty[5]+m*odchyly[5])+h*(exthard[5])){
+		return 10;
+	}else{
+		return 11;
+	}
+}
+
+int rank(int k, int l,int p){
+	float m = modul(k,l);
+	int r=rand()%100;
+	if(hardness[p]>=0){
+		return rankhard(r,m,hardness[p]);
+	}else{
+		return rankeasy(r,m,-hardness[p]);
 	}
 }
 
@@ -84,10 +113,10 @@ void main(int argc, char *argv[]){
 	for(i=0;i<n;++i){
 		k=rand()%10;
 		for(j=0;j<30;++j){
-			printf("%d,",rank(k,j/3));
+			printf("%d,",rank(k,j/3,j));
 		}
 		for(j=0;j<20;++j){
-			printf("%d,",(choose(k,j/2)?rank(k,j/2):0));
+			printf("%d,",(choose(k,j/2)?rank(k,j/2,j+30):0));
 		}
 		printf("%d\n",k);
 	}
