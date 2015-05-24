@@ -15,6 +15,13 @@ class Course(models.Model):
 	name = models.CharField(max_length = 250)
 	type = models.CharField(max_length = 250, choices = TYPES)
 	url = models.CharField(max_length = 250)
+	mark4 = models.IntegerField()
+	mark6 = models.IntegerField()
+	mark7 = models.IntegerField()
+	mark8 = models.IntegerField()
+	mark9 = models.IntegerField()
+	mark10 = models.IntegerField()
+	mark11 = models.IntegerField()
 	
 class Mark(models.Model):
 	MARKS = (
@@ -29,3 +36,4 @@ class Mark(models.Model):
 	student = models.ForeignKey('Student', blank = False, null = False)
 	course = models.ForeignKey('Course', blank = False, null = False)
 	mark = models.CharField(max_length = 250, choices = MARKS)
+
